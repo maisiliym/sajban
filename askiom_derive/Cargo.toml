@@ -1,0 +1,23 @@
+[package]
+name = "askiom_derive"
+version = "0.0.1"
+authors = ["li <@li:maisiliym.xyz>"]
+workspace = ".."
+edition = "2018"
+
+[lib]
+proc-macro = true
+
+[features]
+iron = []
+rocket = []
+actix-web = []
+gotham = []
+warp = []
+
+[dependencies]
+askama_shared = { version = "0.9", path = "../askama_shared" }
+proc-macro2 = "1"
+quote = "1"
+syn = "1"
+

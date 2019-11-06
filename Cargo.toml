@@ -1,0 +1,15 @@
+[workspace]
+members = [ "askiom_derive" ]
+
+[package]
+name = "sajban"
+version = "0.0.1"
+authors = ["li <@li:maisiliym.xyz>"]
+edition = "2018"
+
+[dependencies.serde]
+version = "*"
+features = ["derive"]
+
+[dependencies.async-trait-static]
+version = "*"
