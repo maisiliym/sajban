@@ -1,5 +1,5 @@
 [workspace]
-members = [ "askiom_derive" ]
+members = [ "krios", "askiom", "roski_derive", "flo" ]
 
 [package]
 name = "sajban"
@@ -7,9 +7,18 @@ version = "0.0.1"
 authors = ["li <@li:maisiliym.xyz>"]
 edition = "2018"
 
+[dependencies.roski_derive]
+version = "*"
+path = "./roski_derive"
+
 [dependencies.serde]
 version = "*"
-features = ["derive"]
+default-features = false
+features = [ "derive" ]
+git = "file:///git/github.com/serde-rs/serde"
+branch = "master"
 
 [dependencies.async-trait-static]
 version = "*"
+git = "file:///git/github.com/tiannian/async-trait-static"
+branch = "master"
