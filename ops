@@ -1,0 +1,1 @@
+{"version":1,"ops":[{"type":1,"author":{"id":"69a07d807a2c45c38ee4ebfb2bedec5323a2e77c"},"timestamp":1606016976,"title":"Test git-bug","message":"This is a test:\n- one\n- two\n- three\n\n```rust\nfn foo(x: usize) -\u003e Result() {\n  // Comment\n}\n```","files":null}]}
