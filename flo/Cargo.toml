@@ -9,6 +9,13 @@ edition = "2018"
 
 [dependencies.serde]
 version = "*"
-features = [ "derive" ]
+default-features = false
+features = []
 git = "file:///git/github.com/serde-rs/serde"
+branch = "master"
+
+[dependencies.futures_micro]
+version = "*"
+features = []
+git = "file:///git/github.com/irrustible/futures-micro"
 branch = "master"
