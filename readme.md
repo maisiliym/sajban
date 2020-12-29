@@ -11,7 +11,7 @@ Sajban's design is guided by perfection, which is best embodied in living organi
 
 ### Technicalities
 #### Real Computer format
-Computers do no understand text, which means *there is not a single computer-code framework in existence today*. All of the prevalent bronze-age-script-formated "pseudo-codes" in use today must first be *parsed* into logically-meaningful binary trees before computers can make any use of them. This in turn brings _immense_ problems in terms of correctness, performance, innovation and usability. Sajban's first version is based on [bincode][1], which in the author's view is currently the closest to a basic logical code format. Later versions will find the deficiencies in bincode's design, if any, and correct them.
+Computers do no understand text, which means *there is not a single computer-code framework in existence today*. All of the prevalent bronze-age-script-formated "pseudo-codes" in use today must first be *parsed* into logically-meaningful binary trees before computers can make any use of them. This in turn brings _immense_ problems in terms of correctness, performance, innovation and usability. Sajban's first version is based on [bincode][1], which in the author's view is currently the closest to a basic logical code format. Later versions will correct  bincode's deficiencies.
 
 #### Self-describing objects - *Data* is the database
 All sajban code has object-like properties, in the true sense of Alan Kay's 'object-oriented' expression. In practice this implies that any sajban object carries its entire context - from the protocol needed to use it to all its past 'states' , if any, and implicitely, all its possible future transformations.
