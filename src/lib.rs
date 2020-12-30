@@ -9,22 +9,17 @@ use {
 };
 
 pub struct Link {
-    saiz: Saiz,
+    saiz: usize,
     hac: Hash,
-}
-
-impl Link {
-    async fn niu(datom: Datom)
-    -> Result(Link) { }
 }
 
 #[async_trait]
 trait Datom {
-    async fn saiz(self) -> Saiz;
+    async fn saiz(self) -> usize;
 
     async fn stor(self)
-        -> Result(Link);
+        -> Result<Link>;
 
     async fn rytriv(link: Link)
-        -> Result(Self);
+        -> Result<Self>;
 }

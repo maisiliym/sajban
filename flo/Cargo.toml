@@ -10,12 +10,18 @@ edition = "2018"
 [dependencies.serde]
 version = "*"
 default-features = false
-features = []
+features = [ "derive" ]
 git = "file:///git/github.com/serde-rs/serde"
 branch = "master"
 
-[dependencies.futures_micro]
+[dependencies.futures-micro]
 version = "*"
 features = []
 git = "file:///git/github.com/irrustible/futures-micro"
+branch = "main"
+
+[dependencies.generic-array]
+version = "*"
+features = []
+git = "file:///git/github.com/fizyk20/generic-array"
 branch = "master"

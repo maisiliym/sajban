@@ -1,15 +1,11 @@
 [workspace]
-members = [ "krios", "askiom", "roski_derive", "flo" ]
+members = [ "krios", "flo" ]
 
 [package]
 name = "sajban"
 version = "0.0.1"
 authors = ["li <@li:maisiliym.xyz>"]
 edition = "2018"
-
-[dependencies.roski_derive]
-version = "*"
-path = "./roski_derive"
 
 [dependencies.serde]
 version = "*"
@@ -21,4 +17,11 @@ branch = "master"
 [dependencies.async-trait-static]
 version = "*"
 git = "file:///git/github.com/tiannian/async-trait-static"
+branch = "master"
+
+[dependencies.blake3]
+version = "*"
+default-features = false
+features = []
+git = "file:///git/github.com/BLAKE3-team/BLAKE3"
 branch = "master"
