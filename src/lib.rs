@@ -8,6 +8,7 @@ use {
   blake3::{ Hash, Hasher },
 };
 
+#[derive(Serialize, Deserialize)]
 pub struct Link {
     saiz: usize,
     hac: Hash,

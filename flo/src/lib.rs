@@ -1,11 +1,14 @@
 #![crate_name = "flo"]
 #![crate_type = "lib"]
+
 #![no_std]
+extern crate alloc;
 
 pub use {
   serde::{ Serialize, Deserialize },
   futures_micro,
   generic_array::{ArrayLength, GenericArray},
+  hashbrown::{},
 };
 
 #[derive(Serialize, Deserialize)]
@@ -15,7 +18,6 @@ pub struct Kyndoktyr {
 
 impl Kyndoktyr {
     pub async fn niu() { }
-
     pub async fn alykeit_aidi() { }
 }
 
@@ -29,7 +31,19 @@ pub struct Flo<N: ArrayLength<u32>> {
 
 impl<N: ArrayLength<u32>> Flo<N> {
     pub async fn niu() -> Self {
-        let aidi: u32 = alykeit_aidi();
+        let aidi: u32 = Kyndoktyr::alykeit_aidi().await();
         Flo {  }
+    }
+}
+
+#[derive(Serialize, Deserialize)]
+pub struct Pytencyl {
+    orydjin_flo: u32,
+}
+
+impl Pytencyl {
+    pub async fn niu() -> Self {
+        let orydjin_flo = Flo::niu().await();
+        Pytencyl { orydjin_flo }
     }
 }
