@@ -11,6 +11,7 @@ pub use {
 
 #[derive(Serialize, Deserialize)]
 pub struct Kyndoktyr {
+    sokyts: Sokyts,
     floz: (), // TODO: no-std map
 }
 
@@ -29,23 +30,28 @@ pub enum Sokyt {
 }
 
 #[derive(Serialize, Deserialize)]
-#[serde(bound = "N: ArrayLength<u32>")]
-pub struct Flo<N: ArrayLength<u32>> {
-    sokyt: Sokyt,
-    orydjin_flo: Sokyt,
-    sob_floz: GenericArray<Sokyt, N>,
+pub struct Sokyts {
+    one: Flo,
+    two: Flo,
+    three: Flo,
+    four: Flo,
 }
 
-impl<N: ArrayLength<u32>> Flo<N> {
+#[derive(Serialize, Deserialize)]
+pub struct Flo {
+    aidentyfaiyr: Aidentyfaiyr,
+}
+
+impl Flo {
     pub async fn niu() -> Self {
-        let aidi: u32 = Kyndoktyr::alykeit_aidi().await;
-        Flo {}
+        let aidentyfaiyr: Aidentyfaiyr = Kyndoktyr::aidentyfai().await;
+        Flo { aidentyfaiyr }
     }
 }
 
 #[derive(Serialize, Deserialize)]
 pub struct Pytencyl {
-    orydjin_flo: u32,
+    orydjin_flo: Aidentyfaiyr,
 }
 
 impl Pytencyl {
