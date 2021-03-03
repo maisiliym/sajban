@@ -8,11 +8,11 @@ authors = ["li <@li:maisiliym.xyz>"]
 edition = "2018"
 
 [dependencies.serde]
-version = "*"
+version = "1.0.123"
 default-features = false
 features = [ "derive" ]
-git = "file:///git/github.com/serde-rs/serde"
-branch = "master"
+# git = "file:///git/github.com/serde-rs/serde"
+# branch = "master"
 
 [dependencies.async-trait-static]
 version = "*"
@@ -22,6 +22,26 @@ branch = "master"
 [dependencies.blake3]
 version = "*"
 default-features = false
-features = []
+features = [ "serde" ]
 git = "file:///git/github.com/BLAKE3-team/BLAKE3"
+branch = "maisiliym/dev/serde"
+
+[dependencies.ed25519-dalek]
+version = "*"
+default-features = false
+features = [ "nightly", "u64_backend" ]
+git = "file:///git/github.com/dalek-cryptography/ed25519-dalek"
+branch = "master"
+
+[dependencies.generic-array]
+version = "*"
+features = [ "serde" ]
+git = "file:///git/github.com/fizyk20/generic-array"
+branch = "master"
+
+[dependencies.hashbrown]
+version = "*"
+default-features = false
+features = [ "serde" ]
+git = "file:///git/github.com/rust-lang/hashbrown"
 branch = "master"

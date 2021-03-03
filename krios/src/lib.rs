@@ -3,19 +3,29 @@
 #![no_std]
 
 use {
-    sajban::{ Datom, Link, },
+    flo,
+    sajban::{
+        Datom, Link, {Deserialize, Serialize},
+    },
 };
 
-pub trait Kriom {
-    async fn modyfai(self, modyfaiyr: Modyfaiyr) -> Result(Self);    
+#[derive(Serialize, Deserialize)]
+pub struct Kriom {
+    pri_kriom: PriKriom,
+    datom: Link,
 }
 
-struct PriKriom { }
+#[derive(Serialize, Deserialize)]
+pub struct Kriod {
+    pri_kriod: PriKriod,
+    kriom: Kriom,
+}
+
+#[derive(Serialize, Deserialize)]
+struct PriKriom {}
 
 impl<T> Datom for Kriom<T> {
-    async fn stor(self)
-        -> Result(Link) { }
+    async fn stor(self) -> Result(Link) {}
 
-    async fn rytriv(link: Link)
-        -> Result(Self) { }
+    async fn rytriv(link: Link) -> Result(Self) {}
 }

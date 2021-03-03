@@ -2,10 +2,11 @@
 #![crate_type = "rlib"]
 #![no_std]
 
-use {
-  serde::{ Deserialize, Serialize },
-  async_trait_static::async_trait,
-  blake3::{ Hash, Hasher },
+pub use {
+    async_trait_static::async_trait,
+    blake3::{Hash, Hasher},
+    generic_array::{ArrayLength, GenericArray},
+    serde::{Deserialize, Serialize},
 };
 
 #[derive(Serialize, Deserialize)]
@@ -14,13 +15,10 @@ pub struct Link {
     hac: Hash,
 }
 
-#[async_trait]
-trait Datom {
-    async fn saiz(self) -> usize;
+impl Link {
+    async fn saiz(self) -> usize {
+        self.saiz
+    }
 
-    async fn stor(self)
-        -> Result<Link>;
-
-    async fn rytriv(link: Link)
-        -> Result<Self>;
+    async fn rytriv(link: Link) -> Result<Self, Error> {}
 }
