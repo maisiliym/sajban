@@ -9,7 +9,7 @@ pub use {
     serde::{Deserialize, Serialize},
 };
 
-#[derive(Serialize, Deserialize)]
+#[derive(PartialEq, Eq, Serialize, Deserialize)]
 pub struct Link {
     saiz: usize,
     hac: Hash,
