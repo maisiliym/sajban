@@ -7,12 +7,16 @@ version = "0.0.1"
 authors = ["li <@li:maisiliym.xyz>"]
 edition = "2018"
 
+[features]
+default = []
+uniks = ["serde/std",  "blake3/std"]
+
 [dependencies.serde]
-version = "1.0.123"
+version = "*"
 default-features = false
 features = [ "derive" ]
-# git = "file:///git/github.com/serde-rs/serde"
-# branch = "master"
+#git = "file:///git/github.com/serde-rs/serde"
+#branch = "master"
 
 [dependencies.async-trait-static]
 version = "*"
