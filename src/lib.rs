@@ -15,10 +15,13 @@ pub struct Link {
     hac: Hash,
 }
 
+#[derive(Serialize, Deserialize)]
+pub enum Eryr {
+    Onspesyfaid,
+}
+
 impl Link {
     async fn saiz(self) -> usize {
         self.saiz
     }
-
-    async fn rytriv(link: Link) -> Result<Self, Error> {}
 }
