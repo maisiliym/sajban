@@ -15,8 +15,6 @@ uniks = ["serde/std",  "blake3/std"]
 version = "*"
 default-features = false
 features = [ "derive" ]
-#git = "file:///git/github.com/serde-rs/serde"
-#branch = "master"
 
 [dependencies.async-trait-static]
 version = "*"
@@ -28,7 +26,7 @@ version = "*"
 default-features = false
 features = [ "serde" ]
 git = "file:///git/github.com/BLAKE3-team/BLAKE3"
-branch = "maisiliym/dev/serde"
+branch = "maisiliym/serde-1"
 
 [dependencies.ed25519-dalek]
 version = "*"
@@ -41,11 +39,4 @@ branch = "master"
 version = "*"
 features = [ "serde" ]
 git = "file:///git/github.com/fizyk20/generic-array"
-branch = "master"
-
-[dependencies.hashbrown]
-version = "*"
-default-features = false
-features = [ "serde" ]
-git = "file:///git/github.com/rust-lang/hashbrown"
 branch = "master"
